@@ -1,0 +1,5 @@
+<x-layout title="Welcome">
+      <h1> Hello World!! </h1>
+
+ 
+</x-layout>
