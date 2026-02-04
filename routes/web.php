@@ -18,13 +18,17 @@ Route::get('/', function () {
 
 // });
 
-Route::get('/about', function(){
-    return view('about');
-});
+// Route::get('/about', function(){
+//     return view('about');
+// });
 
 
 Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('students',[StudentController::class,'index']);
+Route::controller(StudentController::class)->group(function(){
+    
+    Route::get('students','index');
+    Route::get('about','about'); 
+});
